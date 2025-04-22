@@ -838,7 +838,7 @@ async def lock_chat_command(client: Client, message: Message):
         await message.reply_text(f"❌ حدث خطأ أثناء تفعيل قفل الحذف: {str(e)}")
 
 
-@app.on_message(filters.command(["ف ","فتح الدردشة"], prefixes=[""]) & filters.group, group=1)
+@app.on_message(filters.command(["ف","فتح الدردشة"], prefixes=[""]) & filters.group, group=1)
 async def unlock_chat_command(client: Client, message: Message):
     chat_id = message.chat.id
     user_id = message.from_user.id
